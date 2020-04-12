@@ -3,10 +3,10 @@ def nyc_pigeon_organizer(data)
   data.map do |col_gen_lives, attributes|
     attributes.each do |property, name_array|
       name_array.map do |name|
-        if organized_data[name] == nil
+        if !organized_data[name]
           organized_data[name] = {}
         end
-         if organized_data[name][col_gen_lives] == nil
+         if !organized_data[name][col_gen_lives]
             organized_data[name][col_gen_lives] = []
        end
          organized_data[name][col_gen_lives] << (property.to_s)
